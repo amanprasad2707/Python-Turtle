@@ -1,0 +1,31 @@
+import turtle
+t=turtle.Turtle()
+s=turtle.Screen()
+s.bgcolor("black")
+t.speed(0)
+t.width(12)
+def curve():
+    for i in range (200):
+        t.right(1)
+        t.forward(1)
+def heart():
+    t.color("red","red")
+    t.begin_fill()
+    t.left(140)
+    t.forward(113)
+    curve()
+    t.left(120)
+    curve()
+    t.forward(113)
+    t.end_fill()
+heart()
+t.penup()
+t.goto(0,170)
+t.color('black')
+t.pendown()
+for i in range (3):
+    t.left(75)
+    t.forward(40)
+    t.right(65)
+    t.forward(45)
+turtle.exitonclick()
